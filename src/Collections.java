@@ -101,6 +101,21 @@ public class Collections {
     }
 
     /***
+     * Lze pristupovat (getter) k jedne hodnote? Jakym zpusobem/metodou?
+     */
+    private void getElemets(){
+        arrayList.get(0);
+        linkedList.get(0);
+        treeSet.iterator();
+        hashMap.get(null);
+        treeMap.get(null);
+        priorityQueue.poll();
+        priorityQueue.peek();
+        arrayDeque.peek();
+        arrayDeque.poll();
+        arrayDeque.pop();
+    }
+    /***
      * Jsou hodnoty ulozene v serazenem poradi od nejmensiho po nejvetsi?
      */
     private void testSorted() {
@@ -354,6 +369,9 @@ public class Collections {
         }
     }
 
+    /***
+     * Muze vice vlaken bezpecne paralerne vkladat a mazat hodnoty? (thread-safe)
+     */
     public static void testThreadSafe() {
         ConsoleColors.printBlue("Collections.testThreadSafe");
         emptyAll();
